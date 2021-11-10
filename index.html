@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tooltip</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body onload="load()">
+    <div class="tooltip" onmouseover="change()">
+        <h3></h3>
+        <span class="tooltipGif">
+            <img id="gif" src="https://c.tenor.com/jk5Gfl50hS4AAAAi/tom-y-jerry-jerry.gif" class="imgGif" alt="">
+            <h5 class="text"></h5>
+        </span>
+    </div>
+</body>
+<script>
+    var characters = [
+        {name:"Jerry",link:"https://c.tenor.com/jk5Gfl50hS4AAAAi/tom-y-jerry-jerry.gif",text:"Confused Jerry",color:"brown"},
+        {name:"Tom",link:"https://c.tenor.com/DYzUq3uX1QgAAAAC/tom-and-jerry-evil.gif",text:"Evil Cat",color:"skyblue"},
+        {name:"Sinchan",link:"https://c.tenor.com/AU7dFDta79wAAAAS/crayon-shinchan-dancing.gif", text:"Dancing Sinchan" ,color:"red"},
+        {name:"Doremon",link:"https://c.tenor.com/g27oWEO9nV8AAAAS/yay-hooray.gif", text:"Welcoming Doremon" ,color:"blue"},
+        {name:"Raju",link:"https://c.tenor.com/Pl-rSdzJ-1oAAAAi/victory-success.gif", text:"Victorious Mighty Raju",color:"palegoldenrod"}
+    ]
+    var i= 0;
+    function load(){
+       
+        let characterName = document.querySelector("h3");
+        let characterImg = document.querySelector("img");
+        let characterText = document.querySelector("h5");
+        characterName.innerText = characters[0].name;
+        characterName.style.color=characters[0].color;
+        characterImg.src=characters[0].link;
+        characterText.innerText = characters[0].text;
+    }
+    function change(){
+        let characterName = document.querySelector("h3");
+        let characterImg = document.querySelector("img");
+        let characterText = document.querySelector("h5");
+        var sound = new Audio("https://www.myinstants.com/media/sounds/stupid-f__king-bird.mp3");
+        sound.play()
+        characterName.innerText = characters[i].name;
+        characterName.style.color=characters[i].color;
+        characterImg.src=characters[i].link;
+        characterText.innerText = characters[i].text;
+        if(i==characters.length-1)
+        {
+            i=0;
+        }
+        else{
+            i++
+        }
+    }
+</script>
+</html>
+
+
+
+

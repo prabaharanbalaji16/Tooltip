@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+    height: 46vw;
+}
+.tooltip {
+    width: 25%;
+    height: 60px;
+    text-align: center;
+    position: relative;
+    margin: 50px 20px;
+    border: 1px solid rgba(104, 102, 102, 0.103);
+    border-radius: 20px;
+    box-shadow: 12px 12px 10px rgba(0, 0, 0, 0.336);
+
+  }
+h3{
+    font-family: monospace;
+    position: relative;
+    font-size: 30px;
+    padding: 20px 2px 5px 10px;
+    margin: 0px -4px;
+}
+  .tooltip .tooltipGif {
+    visibility: hidden;
+  width: 250px;
+  background-color: #dcdcdc;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 120%;
+  left: 50%;
+  margin-left: -120px;
+  box-shadow: 12px 12px 10px rgba(0, 0, 0, 0.336);
+
+  }
+  .tooltip .tooltipGif::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent lightgray transparent;
+  }
+  
+  .imgGif{
+    object-fit: fill;
+    height: 80px;
+    width: 80px;
+    margin-top: 20px;
+}
+
+.tooltip:hover .tooltipGif{
+    visibility: visible;
+}
+
+.text{
+    color: black;
+    font-family: sans-serif;
+    font-size:20px;
+    text-shadow: 5px 5px 10px lightslategray;
+}
